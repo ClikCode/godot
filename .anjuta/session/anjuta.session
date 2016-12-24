@@ -1,0 +1,28 @@
+[Anjuta]
+Maximized=1
+Geometry=1024x717+0+0
+
+[File Loader]
+Files=../../doc/base/classes.xml#27%%%../../bin/tests/SCsub#12%%%../../bin/tests/test_gdscript.cpp#857%%%../../bin/tests/test_gdscript.h#42
+
+[Document Manager]
+bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+
+[Execution]
+Run in terminal=2
+Working directories=../../.
+
+[Project Manager]
+Expand=godot%%%godot//doc%%%godot//doc//base%%%godot//modules%%%godot//platform%%%godot//platform//x11
+
+[Debugger]
+Source directories=file:///home/kitkat/Documents/godot/core%%%file:///home/kitkat/Documents/godot/core/math%%%file:///home/kitkat/Documents/godot/core/os%%%file:///home/kitkat/Documents/godot/drivers%%%file:///home/kitkat/Documents/godot/tools%%%file:///home/kitkat/Documents/godot%%%file:///home/kitkat/Documents/godot/platform/x11
+Stop at beginning=2
+
+[Build]
+Configuration list=1:Default:%%%1:Debug:Debug%%%1:Profiling:Profiling%%%1:Optimized:Optimized
+Selected Configuration=Default
+BuildArgs/Default=--enable-maintainer-mode
+BuildArgs/Debug=--enable-maintainer-mode 'CFLAGS=-g -O0' 'CXXFLAGS=-g -O0' 'JFLAGS=-g -O0' 'FFLAGS=-g -O0'
+BuildArgs/Profiling=--enable-maintainer-mode 'CFLAGS=-g -pg' 'CXXFLAGS=-g -pg' 'JFLAGS=-g -pg' 'FFLAGS=-g -pg'
+BuildArgs/Optimized=--enable-maintainer-mode 'CFLAGS=-O2' 'CXXFLAGS=-O2' 'JFLAGS=-O2' 'FFLAGS=-O2'
