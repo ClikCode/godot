@@ -22090,62 +22090,82 @@
 </class>
 <class name="Navigation2D" inherits="Node2D" category="Core">
 	<brief_description>
+		2D path-finding operations, 2D version of [Navigation]
 	</brief_description>
 	<description>
+		2D path-finding operations, 2D version of [Navigation]
+		Uses multiple [NavigationPolygon] to calculate the shortest path between two points.
 	</description>
 	<methods>
 		<method name="get_closest_point">
 			<return type="Vector2">
 			</return>
 			<argument index="0" name="to_point" type="Vector2">
+			  the point you want to compare with
 			</argument>
 			<description>
+			  Gets the the closest point to the navigation mesh, returns to_point if point is already inside 
 			</description>
 		</method>
 		<method name="get_closest_point_owner">
 			<return type="Object">
 			</return>
 			<argument index="0" name="to_point" type="Vector2">
+			  the point you want to compare with
 			</argument>
 			<description>
+			  Return the [NavigationMesh] that is the closest to point otherwise returns [NULL] 
 			</description>
 		</method>
 		<method name="get_simple_path">
 			<return type="Vector2Array">
 			</return>
 			<argument index="0" name="start" type="Vector2">
+			  the starting point 
 			</argument>
 			<argument index="1" name="end" type="Vector2">
+			  the destination point
 			</argument>
 			<argument index="2" name="optimize" type="bool" default="true">
+				<!--testing needed-->
 			</argument>
 			<description>
+				finds the shortest (simple) path between two points
 			</description>
 		</method>
 		<method name="navpoly_create">
 			<return type="int">
+				the index of the added [NavigationPolygon]
 			</return>
 			<argument index="0" name="mesh" type="NavigationPolygon">
 			</argument>
 			<argument index="1" name="xform" type="Matrix32">
+				The local [Transform2D] of the [navigation_polygon]
 			</argument>
 			<argument index="2" name="owner" type="Object" default="NULL">
+				The [NavigationPolygonInstance] the [NavigationPolygon] belongs to. <!--added automatically if created from editor-->
 			</argument>
 			<description>
+				Adds the [NavigationPolygon] into [Navigation2D]
 			</description>
 		</method>
 		<method name="navpoly_remove">
 			<argument index="0" name="id" type="int">
+				Index of the [NavigationPolygon] you to remove.
 			</argument>
 			<description>
+				Removes a [NavigationPolygon] from [Navigation]
 			</description>
 		</method>
 		<method name="navpoly_set_transform">
 			<argument index="0" name="id" type="int">
+				The index of the [NavigationPolygon] you want to set.
 			</argument>
 			<argument index="1" name="xform" type="Matrix32">
+				local [Transform2D] to use with the [NavigationPolygon].
 			</argument>
 			<description>
+				Changes the [Transform2D] of the [NavigationPolygon]
 			</description>
 		</method>
 	</methods>
@@ -22154,6 +22174,7 @@
 </class>
 <class name="NavigationMesh" inherits="Resource" category="Core">
 	<brief_description>
+		Used for path finding, 3D version of [NavigationPolygon].
 	</brief_description>
 	<description>
 	</description>
@@ -22234,6 +22255,7 @@
 </class>
 <class name="NavigationPolygon" inherits="Resource" category="Core">
 	<brief_description>
+		Define a navigation polygon for 2D, 2D version of [NavigationMesh]
 	</brief_description>
 	<description>
 	</description>
